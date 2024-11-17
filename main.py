@@ -4,6 +4,8 @@ from IPython.display import Markdown, display
 import ollama
 
 
+MODEL = "llama3.2"
+
 class Website:
     """
     A utility class to represent a Website that we have scraped
@@ -48,7 +50,7 @@ def display_summary(url):
     summary = summarize(url)
     display(Markdown(summary))
 
-display_summary("https://en.wikipedia.org/wiki/Machine_learning")
+print(summarize("https://en.wikipedia.org/wiki/Machine_learning"))
 
 
 # The response generated is as follows
